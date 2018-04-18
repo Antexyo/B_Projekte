@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Aufgabe_2_Password_Checker
 {
     public class PasswortChecker
     {
 
-        public int isGutesPasswort(string password)
+        public static int isGutesPasswort(string password)
         {
 
             int scorecounter = 0; //initialize ScoreCounter
@@ -109,17 +106,7 @@ namespace Aufgabe_2_Password_Checker
         {
             Console.WriteLine("Schreiben Sie Ihren Passwort String!");
             string userinput = Console.ReadLine();
-            PasswortChecker check1 = new PasswortChecker();
-            int score = check1.isGutesPasswort(userinput);
-            Console.WriteLine("Score ist: {0}", score);
-            if (score == 8)
-            {
-                Console.WriteLine("Sie haben ein perfektes Passwort!");
-            }
-            else
-            {
-                Console.WriteLine("Ihr Passwort ist verbesserungswürdig!");
-            }
+            Console.WriteLine("Das Passwort hat einen Score von {0}", PasswortChecker.isGutesPasswort(userinput));
             Console.ReadKey();
             
         }
